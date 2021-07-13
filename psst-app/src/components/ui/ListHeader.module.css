@@ -1,0 +1,48 @@
+.list-header-container {
+  border-bottom: 1px solid black;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0 0 0;
+  padding: 0.5rem 0;
+}
+
+.content-counter {
+  margin-right: auto;
+}
+
+.actions button {
+  position: absolute;
+  font: inherit;
+  position: relative;
+  width: auto;
+  height: 40px;
+  background: #e57f84;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.3s;
+  /* Typo */
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.actions button::after {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e74c3c;
+  content: "";
+  z-index: -2;
+  transition: transform 0.3s;
+}
+
+.actions button:hover::after {
+  transform: translateY(-80%);
+  transition: transform 0.3s;
+}

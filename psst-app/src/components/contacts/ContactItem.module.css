@@ -1,0 +1,76 @@
+* {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.contact-item-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.2rem 1rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 4px;
+  /* background: darkcyan; */
+  background: #fcf4f4;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item-content {
+  padding: 0.5rem 0.5rem;
+  /* background: cornsilk; */
+  min-width: 30rem;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* border: 1px solid black; */
+  border-radius: 4px;
+}
+
+.contact-item-content div {
+  margin: 0 0.5rem;
+  width: 30rem;
+  border-right: 1px solid black;
+}
+
+.contact-item-content div span {
+  /* background: tomato; */
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+}
+
+.actions {
+  display: inherit;
+}
+
+.actions button {
+  /* background: #f5f2e8; */
+  background: inherit;
+  margin: 1rem 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.actions button:hover {
+  background-color: #e5a52e;
+  box-shadow: 0px 15px 20px rgba(229, 144, 46, 0.4);
+  color: #fff;
+  transform: translateY(-5px);
+}

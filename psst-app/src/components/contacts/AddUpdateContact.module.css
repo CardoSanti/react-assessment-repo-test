@@ -1,0 +1,136 @@
+.form-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-container p {
+  margin-left: 1rem;
+}
+
+.form {
+  width: 80%;
+  position: relative;
+  max-height: 50px;
+  border: none;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  color: #2f5061;
+  padding-top: 20px;
+  border: none;
+  background-color: inherit;
+  font-size: 1rem;
+  outline: none;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #2f5061;
+}
+
+.form label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  border-bottom: 3px solid #e57f84;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.span-valid {
+  transform: translateY(-120%);
+  font-size: 14px;
+  color: #e57f84;
+}
+
+.form input:focus + .label-name::after,
+.span-valid::after {
+  transform: translateX(0%);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.actions button {
+  position: absolute;
+  font: inherit;
+  position: relative;
+  width: 100px;
+  height: 40px;
+  background: #e57f84;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.3s;
+  /* Typo */
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.actions button::after {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e74c3c;
+  content: "";
+  z-index: -2;
+  transition: transform 0.3s;
+}
+
+.actions button:hover::after {
+  transform: translateY(-80%);
+  transition: transform 0.3s;
+}
+
+.error-text {
+  color: #b40e0e;
+  width: 10rem;
+  /* font-size: 5rem; */
+}
+
+.form input::-webkit-inner-spin-button,
+.form input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* 
+.form input[type="number"] {
+  -moz-appearance: textfield;
+  background: inherit;
+} */
+
+.form input:visited {
+  background: inherit;
+}
+
+.form input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 50px #f8f7f7 inset;
+  box-shadow: 0 0 0 50px #f8f7f7 inset;
+}
